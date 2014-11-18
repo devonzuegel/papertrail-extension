@@ -1,0 +1,32 @@
+{
+  "name": "Paper Trail",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This extension gives shoppers insight on the political activity of a company for the product they are about to purchase",
+  "homepage_url": "http://extensionizr.com",
+  "icons": {
+    "16": "icons/planeLogo.png",
+    "48": "icons/planeLogo.png",
+    "128": "icons/planeLogo.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/planeLogo.png",
+    "default_title": "browser action demo",
+    "default_popup": "src/browser_action/homepage.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/*"
+      ],
+      "css": [
+        "src/inject/inject.css"
+      ]
+    }
+  ]
+}

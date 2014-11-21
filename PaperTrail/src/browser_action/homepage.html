@@ -1,7 +1,50 @@
 <!doctype html>
 
+<style type="text/css">
+	#mainMenu {
+		padding: 10px;
+		max-height: 300px;
+		width: 248px;
+
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 300;
+		font-size: 11pt;
+		overflow: scroll;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+
+	.label {
+		font-size: 9pt;
+		text-transform: uppercase;
+		font-size: 
+	}
+
+	.logo {
+		width: 100%;
+	}
+
+	.graph {
+		width: 100%;
+	}
+
+</style>
+
 <head>
-	<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+	<script src='js/jquery-2.1.1.min.js' type='text/javascript'></script>
+	<script src='js/handlebars-v2.0.0.js' type='text/javascript'></script>
+	<script src='js/mustache.min.js' type="text/javascript"></script>
+
+  <script src="js/d3.min.js" type="text/javascript"></script>
+  <script src="js/Chart.js" type="text/javascript"></script>
+  <script src="https://www.google.com/jsapi?autoload=%7B%22modules%22%3A%5B%7B%22name%22%3A%22visualization%22%2C%22version%22%3A%221%22%2C%22packages%22%3A%5B%22corechart%22%5D%7D%5D%7D" type="text/javascript"></script>
+
+  <style src='../inject/inject.css' type="text/css"></style>
+
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -17,12 +60,13 @@
 
 <div id='mainMenu'>
 
-	<div id='target'>Hello!</h1>
+	<div class='label'>Manufacturer: <strong>Cuisinart</strong></div>
+	<img class='logo' src="http://fittedkitchendesign.com/wp-content/uploads/2014/07/cuisinart-logo.jpg"/>
 
-  <script type='text/x-handlebars-template' id='company-template'>
-  </script>
-
+	<img class='graph' src='img/doughnut-graph.png'>
+	<img class='graph' src='img/doughnut-graph.png'>
+	<img class='graph' src='img/doughnut-graph.png'>
 </div>
 
-<script type="text/javascript" src="js/main.js"></script>
+<script type='text/javascript' src='js/main.js'></script>
 </body>

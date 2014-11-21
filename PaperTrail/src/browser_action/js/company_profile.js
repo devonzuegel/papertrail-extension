@@ -15,9 +15,9 @@
    * picks the first existing entry. If no entry exists, this view will display
    * the CreatingEntryView. */
   CompanyProfile.render = function() {
-    $('#test1').html('hiiii');
+    $('#test1').html('THIS IS WORKING!');
   };
 
-  window.EntryView = EntryView;
+  window.CompanyProfile = CompanyProfile;
 
 })(this, this.document);

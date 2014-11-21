@@ -1,7 +1,7 @@
 {
   "name": "Paper Trail",
   "version": "1.0",
-  "manifest_version": 2,
+  "manifest_version": 1,
   "description": "Paper Trail gives shoppers insight on the political activity of a company for the product they are about to purchase",
   "homepage_url": "http://stanford.edu/class/cs147/projects/behavior/papertrail/",
   "icons": {
@@ -22,13 +22,14 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*",
-        "https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+        "https://*/*",
+        "https://*/*"
       ],
       "css": [
         "src/inject/inject.css"
       ],
       "js": [
+        "src/browser_action/js/jquery-2.1.1.min.js",
         "src/browser_action/js/handlebars-v2.0.0.js",
         "src/browser_action/js/main.js",
         "src/browser_action/js/company_profile.js"

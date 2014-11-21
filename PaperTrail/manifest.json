@@ -1,32 +1,39 @@
 {
   "name": "Paper Trail",
-  "version": "0.0.1",
+  "version": "1.0",
   "manifest_version": 2,
-  "description": "This extension gives shoppers insight on the political activity of a company for the product they are about to purchase",
-  "homepage_url": "http://extensionizr.com",
+  "description": "Paper Trail gives shoppers insight on the political activity of a company for the product they are about to purchase",
+  "homepage_url": "http://stanford.edu/class/cs147/projects/behavior/papertrail/",
   "icons": {
     "16": "icons/planeLogo.png",
     "48": "icons/planeLogo.png",
     "128": "icons/planeLogo.png"
   },
   "default_locale": "en",
-  "background": {
-    "page": "src/bg/background.html",
-    "persistent": true
-  },
+  // "background": {
+  //   "page": "src/bg/background.html",
+  //   "persistent": true
+  // },
   "browser_action": {
     "default_icon": "icons/planeLogo.png",
-    "default_title": "browser action demo",
+    "default_title": "Paper Trail",
     "default_popup": "src/browser_action/homepage.html"
   },
   "content_scripts": [
     {
       "matches": [
-        "https://www.google.com/*"
+        "https://www.google.com/*",
+        "https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
       ],
       "css": [
         "src/inject/inject.css"
+      ],
+      "js": [
+        "src/browser_action/js/handlebars-v2.0.0.js",
+        "src/browser_action/js/main.js",
+        "src/browser_action/js/company_profile.js"
       ]
     }
-  ]
+  ],
+  "permissions": ["<all_urls>", "tabs", "notifications" ]
 }

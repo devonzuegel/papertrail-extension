@@ -1,4 +1,32 @@
-data = [
+var products = [
+	{
+		manufacturer: 'Yonanas',
+		logo: 'http://www.yonanas.com/wp-content/uploads/files/2012/07/YonanasTM_Logo_RGB-1024x236.jpg',
+		price: 52.99,
+		img: 'http://ecx.images-amazon.com/images/I/41MQTSBXpLL._SY300_.jpg',
+		party: 'Republican'
+	}, {
+		manufacturer: 'Yonanas',
+		logo: 'http://www.yonanas.com/wp-content/uploads/files/2012/07/YonanasTM_Logo_RGB-1024x236.jpg',
+		price: 73.99,
+		img: 'http://static.citrusstv.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/3/5/3557_453100_extralarge.jpg',
+		party: 'Republican'
+	}, {
+		manufacturer: 'Cuisinart',
+		logo: 'http://blog.mailvu.com/wp-content/uploads/2012/01/Cuisinart-Logo.jpg',
+		price: 52.99,
+		img: 'http://ecx.images-amazon.com/images/I/41FRS3FBY4L._SX300_.jpg',
+		party: 'Republican'
+	}, {
+		manufacturer: 'KitchenAid',
+		logo: 'http://centennialvacuum.com/wp-content/uploads/2014/05/KitchenAid-Repair.jpg',
+		price: 99,
+		img: 'http://iweb.cooking.com/images/products/enlarge/218070e.jpg',
+		party: ''
+	}
+];
+
+var data = [
 	{ "label": "one", "value": 20 },
 	{ "label": "two", "value": 50 }, 
 	{ "label": "three", "value": 30 }
@@ -51,3 +79,5 @@ function pie_chart(div, data, dimensions, colors) {
 pie_chart('#graph', data, {
 	w: 300, h: 300, r: 100
 }, d3.scale.category20c());
+
+

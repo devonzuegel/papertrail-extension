@@ -9,7 +9,7 @@
 
 // CompanyProfile.render();
 
-d3.selectAll("p").style("color", "red");
+// d3.selectAll("body").style("background-color", "red");
 
 // var sampleSVG = d3.select("#viz")
 //     .append("svg")

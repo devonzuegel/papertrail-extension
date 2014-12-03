@@ -1,0 +1,47 @@
+# To begin
+[ ] write up basic readme
+[ ] write up checklist
+[ ] clone project to local
+
+# SoundCloud API (`lib/soundcloud.js`)
+Write an interface to the SoundCloud API
+[ ] implement the `search()` function
+
+---
+
+# Set up
+## Install Server Dependencies
+Run the following commands to install all server dependencies on into the `node_modules` folder.
+````
+npm install
+npm install -g nodemon
+````
+
+## Start MongoDB
+`cd` into your project directory. Execute the following commands to run `mongod`. Keep this terminal open.
+````
+mongod --dbpath data
+````
+
+## Run the Node server
+Open a new terminal and run the node server. `nodemon` and `supervisor` are tools that run node and automaticall restart each time you make changes to the server so that you don't have to manually restart.
+````
+nodemon app.js
+````
+or
+````
+supervisor app
+````
+
+You should now see the starter application at localhost:3000 (or, equivalently, 127.0.0.1:3000) in your browser.
+
+**Note:** If you see `‘Error: failed to connect to [localhost:27017]’`, then MongoDB isn’t running. Make sure to run it using the mongod command above.
+
+# Terminology
+## Post
+A post represents a photo, song, or video that’s on the newsfeed. Each post contains the following fields: 
+
+1. `api` (which API the post is derived from), 
+2. `title` (the title of the post), 
+3. `source` (a Flickr, SoundCloud, or YouTube source URL), and
+4. `upvotes` (the number of upvotes the post has received).

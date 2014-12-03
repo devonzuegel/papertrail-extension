@@ -48,6 +48,6 @@ function pie_chart(div, data, dimensions, colors) {
 };
 
 
-pie_chart('body', data, {
+pie_chart('#graph', data, {
 	w: 300, h: 300, r: 100
 }, d3.scale.category20c());

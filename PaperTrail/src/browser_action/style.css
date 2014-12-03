@@ -1,0 +1,66 @@
+#mainMenu {
+	padding: 10px;
+	padding-top: 80px;
+	padding-left: 4px;
+	max-height: 300px;
+	width: 248px;
+
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 11pt;
+}
+
+#mainMenu span {
+	font-size: 9pt;
+}
+
+#mainMenu p {
+	color: black !important;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+.label {
+	font-size: 12pt;
+	text-transform: uppercase;
+}
+
+.logo {
+	width: 100%;
+}
+
+
+/******* LEGEND *******/
+
+#legend {
+	width: 50%;
+	float: left;
+}
+
+.legend_block {
+	height: 20px;
+	display: block;
+	width: 100%;
+	margin: 10px;
+	text-align: left;
+}
+
+.legend_block .square {
+	float: left;
+	border: 1px solid #bbb;
+	width: 20px;
+	height: 20px;
+}
+
+.legend_block p {
+	padding: 5px;
+}
+
+
+/******* GRAPH *******/
+
+.graph {
+	width: 100%;
+}

@@ -125,7 +125,7 @@ for (var i = 0; i < party_contributions.length; i++) {
 	var $square = $('<div>', { class: 'square' }).css('background-color', color);
 
 	$block.append($square);
-	$block.append(contribution.party);
+	$block.append('<p>'+contribution.party+'</p>');
 
 	$legend.append($block);
 };

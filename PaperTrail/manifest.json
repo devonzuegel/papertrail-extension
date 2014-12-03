@@ -26,7 +26,8 @@
         "https://*/*"
       ],
       "css": [
-        "src/inject/inject.css"
+        "src/inject/inject.css",
+        "src/browser_action/style.css"
       ],
       "js": [
         "src/browser_action/js/jquery-2.1.1.min.js",

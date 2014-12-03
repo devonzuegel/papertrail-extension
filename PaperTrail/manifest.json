@@ -17,7 +17,7 @@
   "browser_action": {
     "default_icon": "icons/planeLogo.png",
     "default_title": "Paper Trail",
-    "default_popup": "src/browser_action/homepage.html"
+    "default_popup": "src/browser_action/product_info.html"
   },
   "content_scripts": [
     {

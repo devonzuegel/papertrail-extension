@@ -1,10 +1,21 @@
 var products = [
 	{
-		manufacturer: 'Yonanas',
-		logo: 'http://www.yonanas.com/wp-content/uploads/files/2012/07/YonanasTM_Logo_RGB-1024x236.jpg',
-		price: 52.99,
-		img: 'http://ecx.images-amazon.com/images/I/41MQTSBXpLL._SY300_.jpg',
-		party: 'Republican'
+		manufacturer: 'KitchenAid',
+		logo: 'http://centennialvacuum.com/wp-content/uploads/2014/05/KitchenAid-Repair.jpg',
+		price: 99,
+		img: 'http://iweb.cooking.com/images/products/enlarge/218070e.jpg',
+		party_contributions: [
+			{
+				label: 'Democrat',
+				value: 20050
+			}, {
+				label: 'Republican',
+				value: 30209
+			}, {
+				label: 'Other',
+				value: 6020
+			}
+		]
 	}, {
 		manufacturer: 'Yonanas',
 		logo: 'http://www.yonanas.com/wp-content/uploads/files/2012/07/YonanasTM_Logo_RGB-1024x236.jpg',
@@ -16,15 +27,16 @@ var products = [
 		logo: 'http://blog.mailvu.com/wp-content/uploads/2012/01/Cuisinart-Logo.jpg',
 		price: 52.99,
 		img: 'http://ecx.images-amazon.com/images/I/41FRS3FBY4L._SX300_.jpg',
-		party: 'Republican'
+		party: 'Democrat'
 	}, {
-		manufacturer: 'KitchenAid',
-		logo: 'http://centennialvacuum.com/wp-content/uploads/2014/05/KitchenAid-Repair.jpg',
-		price: 99,
-		img: 'http://iweb.cooking.com/images/products/enlarge/218070e.jpg',
-		party: ''
+		manufacturer: 'Yonanas',
+		logo: 'http://www.yonanas.com/wp-content/uploads/files/2012/07/YonanasTM_Logo_RGB-1024x236.jpg',
+		price: 52.99,
+		img: 'http://ecx.images-amazon.com/images/I/41MQTSBXpLL._SY300_.jpg',
+		party: 'Republican'
 	}
 ];
+
 
 var data = [
 	{ "label": "one", "value": 20 },
@@ -72,12 +84,25 @@ function pie_chart(div, data, dimensions, colors) {
 	        })
 	        .attr("text-anchor", "middle")                          //center the text on it's origin
 	        .text(function(d, i) { return data[i].label; });        //get the label from our original data array
-    
 };
 
 
-pie_chart('#graph', data, {
+
+var main_product = products[0];
+
+
+var $logo = $("<img>", { 
+	src: main_product.logo,
+	width: '100%'
+});
+
+$('#logo').html($logo);
+
+
+var party_contributions = main_product.party_contributions;
+
+pie_chart('#graph', party_contributions, {
 	w: 300, h: 300, r: 100
-}, d3.scale.category20c());
+}, d3.scale.ordinal().range(["#93b6e9", "#f94D3E" , "yellow"]));
 
 

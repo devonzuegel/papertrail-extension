@@ -1,3 +1,5 @@
+var party_colors = ['#93b6e9', '#f94D3E' , 'yellow'];
+
 var products = [
 	{
 		manufacturer: 'KitchenAid',
@@ -6,13 +8,16 @@ var products = [
 		img: 'http://iweb.cooking.com/images/products/enlarge/218070e.jpg',
 		party_contributions: [
 			{
-				label: 'Democrat',
+				// label: 'Democrat',
+				party: 'Democrat',
 				value: 20050
 			}, {
-				label: 'Republican',
+				// label: 'Republican',
+				party: 'Republican',
 				value: 30209
 			}, {
-				label: 'Other',
+				// label: 'Other',
+				party: 'Other',
 				value: 6020
 			}
 		]
@@ -36,14 +41,6 @@ var products = [
 		party: 'Republican'
 	}
 ];
-
-
-var data = [
-	{ "label": "one", "value": 20 },
-	{ "label": "two", "value": 50 }, 
-	{ "label": "three", "value": 30 }
-];
-
 
 function pie_chart(div, data, dimensions, colors) {
 
@@ -91,7 +88,7 @@ function pie_chart(div, data, dimensions, colors) {
 var main_product = products[0];
 
 
-var $logo = $("<img>", { 
+var $logo = $('<img>', { 
 	src: main_product.logo,
 	width: '100%'
 });
@@ -99,10 +96,52 @@ var $logo = $("<img>", {
 $('#logo').html($logo);
 
 
+/***********************************************************/
+/***********************************************************/
+
+
 var party_contributions = main_product.party_contributions;
 
+/**** Add legend ****/
+
+var $legend = $('<div>', {
+	'id': 'legend',
+	'width': '50%'
+});
+
+$('body').append($legend);
+
+for (var i = 0; i < party_contributions.length; i++) {
+	var contribution = party_contributions[i];
+
+	var color = 'yellow';
+	if (contribution.party === 'Democrat')		color = party_colors[0];
+	if (contribution.party === 'Republican')	color = party_colors[1];
+
+	var $block = $('<div>', {
+		class: 'legend_block'
+	});
+
+	var $square = $('<div>', { class: 'square' }).css('background-color', color);
+
+	$block.append($square);
+	$block.append(contribution.party);
+
+	$legend.append($block);
+};
+
+
+/**** Add pie chart ****/
+
+var $graph_div = $('<div>', {
+	'id': 'graph',
+	'width': '50%'
+}).css('float', 'right');
+
+$('body').append($graph_div);
+
 pie_chart('#graph', party_contributions, {
-	w: 300, h: 300, r: 100
-}, d3.scale.ordinal().range(["#93b6e9", "#f94D3E" , "yellow"]));
+	w: 110, h: 110, r: 55
+}, d3.scale.ordinal().range(party_colors));
 
 

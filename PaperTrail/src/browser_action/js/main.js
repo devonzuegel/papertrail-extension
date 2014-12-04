@@ -85,63 +85,66 @@ function pie_chart(div, data, dimensions, colors) {
 
 
 
-var main_product = products[0];
 
-
-var $logo = $('<img>', { 
-	src: main_product.logo,
-	width: '100%'
-});
-
-$('#logo').html($logo);
-
-
-/***********************************************************/
-/***********************************************************/
-
-
-var party_contributions = main_product.party_contributions;
-
-/**** Add legend ****/
-
-var $legend = $('<div>', {
-	'id': 'legend',
-	'width': '50%'
-});
-
-$('body').append($legend);
-
-for (var i = 0; i < party_contributions.length; i++) {
-	var contribution = party_contributions[i];
-
-	var color = 'yellow';
-	if (contribution.party === 'Democrat')		color = party_colors[0];
-	if (contribution.party === 'Republican')	color = party_colors[1];
-
-	var $block = $('<div>', {
-		class: 'legend_block'
+function logo(product) {
+	var $header = $('<div>');
+	var $manufacturer = $('h3', { text: 'Manufacturer: ' + product.manufacturer})
+	var $logo = $('<img>', { 
+		src: product.logo,
+		width: '100%'
 	});
 
-	var $square = $('<div>', { class: 'square' }).css('background-color', color);
+	$('#logo').html($logo);
+}
 
-	$block.append($square);
-	$block.append('<p>'+contribution.party+'</p>');
+function piechart_with_legend(product) {
+	var party_contributions = product.party_contributions;
 
-	$legend.append($block);
-};
+	/**** Add legend ****/
+	
+	var $legend = $('<div>', {
+		'id': 'legend',
+		'width': '50%'
+	});
+
+	$('body').append($legend);
+
+	for (var i = 0; i < party_contributions.length; i++) {
+		var contribution = party_contributions[i];
+
+		var color = 'yellow';
+		if (contribution.party === 'Democrat')		color = party_colors[0];
+		if (contribution.party === 'Republican')	color = party_colors[1];
+
+		var $block = $('<div>', {
+			class: 'legend_block'
+		});
+
+		var $square = $('<div>', { class: 'square' }).css('background-color', color);
+
+		$block.append($square);
+		$block.append('<p>'+contribution.party+'</p>');
+
+		$legend.append($block);
+	};
 
 
-/**** Add pie chart ****/
+	/**** Add pie chart ****/
 
-var $graph_div = $('<div>', {
-	'id': 'graph',
-	'width': '50%'
-}).css('float', 'right');
+	var $graph_div = $('<div>', {
+		'id': 'graph',
+		'width': '50%'
+	}).css('float', 'right');
 
-$('body').append($graph_div);
+	$('body').append($graph_div);
 
-pie_chart('#graph', party_contributions, {
-	w: 110, h: 110, r: 55
-}, d3.scale.ordinal().range(party_colors));
+	pie_chart('#graph', party_contributions, {
+		w: 110, h: 110, r: 55
+	}, d3.scale.ordinal().range(party_colors));
+}
 
 
+var main_product = products[0];
+
+logo(main_product);
+piechart_with_legend(main_product);

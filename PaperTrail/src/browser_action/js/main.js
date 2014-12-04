@@ -1,9 +1,46 @@
-data = [
-	{ "label": "one", "value": 20 },
-	{ "label": "two", "value": 50 }, 
-	{ "label": "three", "value": 30 }
-];
+var party_colors = ['#93b6e9', '#f94D3E' , 'yellow'];
 
+var products = [
+	{
+		manufacturer: 'KitchenAid',
+		logo: 'http://centennialvacuum.com/wp-content/uploads/2014/05/KitchenAid-Repair.jpg',
+		price: 99,
+		img: 'http://iweb.cooking.com/images/products/enlarge/218070e.jpg',
+		party_contributions: [
+			{
+				// label: 'Democrat',
+				party: 'Democrat',
+				value: 20050
+			}, {
+				// label: 'Republican',
+				party: 'Republican',
+				value: 30209
+			}, {
+				// label: 'Other',
+				party: 'Other',
+				value: 6020
+			}
+		]
+	}, {
+		manufacturer: 'Yonanas',
+		logo: 'http://www.yonanas.com/wp-content/uploads/files/2012/07/YonanasTM_Logo_RGB-1024x236.jpg',
+		price: 73.99,
+		img: 'http://static.citrusstv.com/media/catalog/product/cache/4/image/9df78eab33525d08d6e5fb8d27136e95/3/5/3557_453100_extralarge.jpg',
+		party: 'Republican'
+	}, {
+		manufacturer: 'Cuisinart',
+		logo: 'http://blog.mailvu.com/wp-content/uploads/2012/01/Cuisinart-Logo.jpg',
+		price: 52.99,
+		img: 'http://ecx.images-amazon.com/images/I/41FRS3FBY4L._SX300_.jpg',
+		party: 'Democrat'
+	}, {
+		manufacturer: 'Yonanas',
+		logo: 'http://www.yonanas.com/wp-content/uploads/files/2012/07/YonanasTM_Logo_RGB-1024x236.jpg',
+		price: 52.99,
+		img: 'http://ecx.images-amazon.com/images/I/41MQTSBXpLL._SY300_.jpg',
+		party: 'Republican'
+	}
+];
 
 function pie_chart(div, data, dimensions, colors) {
 
@@ -44,10 +81,10 @@ function pie_chart(div, data, dimensions, colors) {
 	        })
 	        .attr("text-anchor", "middle")                          //center the text on it's origin
 	        .text(function(d, i) { return data[i].label; });        //get the label from our original data array
-    
 };
 
 
+<<<<<<< HEAD
 pie_chart('#graph', data, {
 	w: 300, h: 300, r: 100
 }, d3.scale.category20c());
@@ -57,3 +94,69 @@ function showValue(newValue)
 	document.getElementById("sliderBar").innerHTML=newValue;
 } 
 
+=======
+
+
+function logo(product) {
+	var $header = $('<div>');
+	var $manufacturer = $('h3', { text: 'Manufacturer: ' + product.manufacturer})
+	var $logo = $('<img>', { 
+		src: product.logo,
+		width: '100%'
+	});
+
+	$('#logo').html($logo);
+}
+
+function piechart_with_legend(product) {
+	var party_contributions = product.party_contributions;
+
+	/**** Add legend ****/
+	
+	var $legend = $('<div>', {
+		'id': 'legend',
+		'width': '50%'
+	});
+
+	$('body').append($legend);
+
+	for (var i = 0; i < party_contributions.length; i++) {
+		var contribution = party_contributions[i];
+
+		var color = 'yellow';
+		if (contribution.party === 'Democrat')		color = party_colors[0];
+		if (contribution.party === 'Republican')	color = party_colors[1];
+
+		var $block = $('<div>', {
+			class: 'legend_block'
+		});
+
+		var $square = $('<div>', { class: 'square' }).css('background-color', color);
+
+		$block.append($square);
+		$block.append('<p>'+contribution.party+'</p>');
+
+		$legend.append($block);
+	};
+
+
+	/**** Add pie chart ****/
+
+	var $graph_div = $('<div>', {
+		'id': 'graph',
+		'width': '50%'
+	}).css('float', 'right');
+
+	$('body').append($graph_div);
+
+	pie_chart('#graph', party_contributions, {
+		w: 110, h: 110, r: 55
+	}, d3.scale.ordinal().range(party_colors));
+}
+
+
+var main_product = products[0];
+
+logo(main_product);
+piechart_with_legend(main_product);
+>>>>>>> ed3f38d30a0d59a47a465a9540a0cf3a58891269

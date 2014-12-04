@@ -6,24 +6,32 @@
 		padding: 10px;
 		padding-top: 70px;
 		padding-left: 4px;
+		padding-right: 4px; 
 		max-height: 300px;
 		width: 248px;
+		text-align: center; 
 
 		font-family: 'Open Sans', sans-serif;
 		font-weight: 300;
-		font-size: 12pt;
+		font-size: 11pt;
 	}
 
 	#mainMenu span {
-		font-size: 9pt;
+		font-size: 10pt;
 	}
 
 	#mainMenu p {
 		color: black !important;
+		font-size: 9pt; 
 	}
 
 	h1 {
 		font-size: 2em;
+	}
+
+	h2 {
+		font-weight: 300;
+		font-style: bold; 
 	}
 
 	.label {
@@ -37,6 +45,17 @@
 
 	.graph {
 		width: 100%;
+	}
+
+	.button { 
+		margin-top: 5px; 
+		border-bottom-color: #FFFFFF; 
+		background-color: #FFFFFF;
+
+	}
+
+	.button:hover { 
+		background-color: #00CCCC;
 	}
 
 </style>
@@ -57,7 +76,6 @@
 </head>
 
 <body>
-	
 
 
 <nav>
@@ -67,13 +85,18 @@
 				<a href='product_info.html'><img style="float: right; padding-top: 8px; padding-right: 8px" src='../../icons/barcode.png' width='55px'></a>
 </nav>
 
+
 <div id='mainMenu'>
 
-	<p>Take this fun political quiz.</p>
+	<h2> <b> Settings </b> </h2>
+	<p> The political quiz below allows us to alert, notify, and make recommendations to you based on your political preferences. </p>
+	<a href='quiz.html'><button class="button" style= "padding: 10px 10px;">Take Political Quiz</button> </a>
 
-	<P>Sign up for email updates.</p>
+	<p> Change your notification, alert, and email settings. </p>
+	<a href='settings.html'><button class="button" style= "padding: 10px 10px;">Notifcation Settings</button></a>
+
 
 </div>
 
-<script type='text/javascript' src='js/main.js'></script>
+
 </body>

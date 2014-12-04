@@ -107,7 +107,7 @@ function piechart_with_legend(product) {
 		'width': '50%'
 	});
 
-	$('body').append($legend);
+	$('.papertrail').append($legend);
 
 	for (var i = 0; i < party_contributions.length; i++) {
 		var contribution = party_contributions[i];
@@ -136,7 +136,7 @@ function piechart_with_legend(product) {
 		'width': '50%'
 	}).css('float', 'right');
 
-	$('body').append($graph_div);
+	$('.papertrail').append($graph_div);
 
 	pie_chart('#graph', party_contributions, {
 		w: 110, h: 110, r: 55

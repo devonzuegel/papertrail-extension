@@ -1,10 +1,5 @@
-#mainMenu {
-	padding: 10px;
-	height: 200px;
-	width: 248px;
-	font-family: Helvetica, Ubuntu, Arial, sans-serif;
-}
+/*
 
-h1 {
-	font-size: 2em;
-}
+Applies styles to the main page, but *not* our popup.
+
+*/

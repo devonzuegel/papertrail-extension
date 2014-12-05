@@ -1,43 +1,68 @@
 <!doctype html>
 
-
 <style type="text/css">
-	#mainMenu {
-		padding: 10px;
-		padding-top: 80px;
-		padding-left: 4px;
-		max-height: 300px;
-		width: 248px;
+  #mainMenu {
+    padding: 10px;
+    padding-top: 70px;
+    padding-left: 4px;
+    padding-right: 4px; 
+    max-height: 300px;
+    width: 248px;
+    text-align: center; 
 
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 300;
-		font-size: 11pt;
-	}
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 11pt;
+  }
 
-	#mainMenu span {
-		font-size: 9pt;
-	}
+  #mainMenu span {
+    font-size: 10pt;
+  }
 
-	#mainMenu p {
-		color: black !important;
-	}
+  #mainMenu p {
+    color: black !important;
+    font-size: 9pt; 
+  }
 
-	h1 {
-		font-size: 2em;
-	}
+  h1 {
+    font-size: 2em;
+  }
 
-	.label {
-		font-size: 12pt;
-		text-transform: uppercase;
-	}
+  h2 {
+    font-weight: 300;
+    font-style: bold; 
+  }
 
-	.logo {
-		width: 100%;
-	}
+  .label {
+    font-size: 9pt;
+    text-transform: uppercase;
+  }
 
-	.graph {
-		width: 100%;
-	}
+  .logo {
+    width: 100%;
+  }
+
+  .graph {
+    width: 100%;
+  }
+
+  .button { 
+    margin-top: 5px; 
+    border-bottom-color: #FFFFFF; 
+    background-color: #FFFFFF;
+
+  }
+
+  .button:hover { 
+    background-color: #00CCCC;
+  }
+
+.alts img {
+    border: solid 1px transparent;
+}
+.alts img:hover {
+    border-color: green;
+}
 
 </style>
 
@@ -61,19 +86,33 @@
 
 
 <nav>
-	<a href='homepage.html'><img style="float: left; padding-top: 6px; padding-left: 3px" src='../../icons/planeLogo2.png' width='60px'></a>
-		<a href='preferences.html'><img style="float: right; padding-top: 8px; padding-right: 8px" src='../../icons/gear2.png' width='55px'></a>
-		<a href='alternatives.html'><img style="float: right; padding-top: 8px; padding-right: 8px" src='../../icons/signpost.png' width='55px'></a>
-				<a href='product_info.html'><img style="float: right; padding-top: 8px; padding-right: 8px" src='../../icons/barcode.png' width='55px'></a>
+  <a href='homepage.html'><img style="float: left; padding-top: 6px; padding-left: 3px" src='../../icons/planeLogo2.png' width='60px'></a>
+    <a href='preferences.html'><img style="float: right; padding-top: 8px; padding-right: 8px" src='../../icons/gear2.png' width='55px'></a>
+    <a href='alternatives.html'><img style="float: right; padding-top: 8px; padding-right: 8px" src='../../icons/alternatives.png' width='55px'></a>
+        <a href='product_info.html'><img style="float: right; padding-top: 8px; padding-right: 8px" src='../../icons/barcode.png' width='55px'></a>
 </nav>
 
 <div id='mainMenu'>
 
-	<div class='label'>Alternatives</div>
+	<h2><b>Alternatives</b></h2>
 
-	<img class="graph" src="img/icecreammakers.png">
+  <p style="font-size: 12px; text-align: left; font-weight: bolder">
+  We've curated alternatives to this product based on your political preferences:
+</p>
+<span class = "alts">
+  <a href="http://www.amazon.com/Yonanas-901-Deluxe-Cream-Silver/dp/B00532A6YK/ref=cm_cr_pr_pdt_img_top?ie=UTF8" target="_blank">
+  	<img class="graph" width = "262px" src="img/icecreammakers1.png"></a>
+    <a href="http://www.amazon.com/Yonanas-902-Frozen-Treat-Silver/dp/B005083ECS/ref=sr_1_2?s=home-garden&ie=UTF8&qid=1417745940&sr=1-2&keywords=Yonanas+902+Deluxe+Ice+Cream+Treat+Maker%2C+Black%2FSilver" target="_blank">
+    <img class="graph" width = "262px" src="img/icecreammakers2.png"> </a>
 
-	<span style="float: right; display: block; width = 60px; background: #1688b1"><a href="manufacturers.html" style="text-decoration: none; color: white; padding-bottom: 10px">Browse manufacturers</a></span>
+
+<a href="http://www.amazon.com/Cuisinart-ICE-21-Frozen-Yogurt-Ice-Sorbet/dp/B003KYSLMW/ref=sr_1_1?s=home-garden&ie=UTF8&qid=1417746021&sr=1-1&keywords=frozen+treat+maker+white" target="_blank">
+      <img class="graph" width = "262px" src="img/icecreammakers3.png"></a>
+
+</span>
+<!-- 
+
+	<span style="float: right; display: block; width = 60px; background: #1688b1"><a href="manufacturers.html" style="text-decoration: none; color: white; padding-bottom: 10px">Browse manufacturers</a></span> -->
 
 
 </div>

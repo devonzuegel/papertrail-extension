@@ -84,6 +84,14 @@ function pie_chart(div, data, dimensions, colors) {
 };
 
 
+pie_chart('#graph', data, {
+	w: 300, h: 300, r: 100
+}, d3.scale.category20c());
+
+function showValue(newValue)
+{
+	document.getElementById("sliderBar").innerHTML=newValue;
+} 
 
 
 function logo(product) {

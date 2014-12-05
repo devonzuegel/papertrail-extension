@@ -84,7 +84,6 @@ function pie_chart(div, data, dimensions, colors) {
 };
 
 
-<<<<<<< HEAD
 pie_chart('#graph', data, {
 	w: 300, h: 300, r: 100
 }, d3.scale.category20c());
@@ -93,8 +92,6 @@ function showValue(newValue)
 {
 	document.getElementById("sliderBar").innerHTML=newValue;
 } 
-
-=======
 
 
 function logo(product) {
@@ -159,4 +156,3 @@ var main_product = products[0];
 
 logo(main_product);
 piechart_with_legend(main_product);
->>>>>>> ed3f38d30a0d59a47a465a9540a0cf3a58891269

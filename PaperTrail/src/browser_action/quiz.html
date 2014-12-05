@@ -47,11 +47,18 @@
 	}
 
 	.button:hover { 
-		background-color: #00CCCC;
+		background-color: #6aaf6a;
 	}
 	.wrapper { 
 		text-align: center; 
 	}
+
+input {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 </style>
 
 <head>
@@ -73,10 +80,10 @@
 	
 
 <nav>
-	<a href='homepage.html'><img style="float: left; padding-top: 6px; padding-left: 3px" src='../../icons/planeLogo2.png' width='60px'></a>
-		<a href='preferences.html'><img style="float: right; padding-top: 8px; padding-right: 8px" src='../../icons/gear2.png' width='55px'></a>
-		<a href='alternatives.html'><img style="float: right; padding-top: 8px; padding-right: 8px" src='../../icons/signpost.png' width='55px'></a>
-				<a href='product_info.html'><img style="float: right; padding-top: 8px; padding-right: 8px" src='../../icons/barcode.png' width='55px'></a>
+  <a href='homepage.html'><img style="float: left; padding-top: 6px; padding-left: 3px" src='../../icons/planeLogo2.png' width='60px'></a>
+    <a href='preferences.html'><img style="float: right; padding-top: 8px; padding-right: 8px" src='../../icons/gear2.png' width='55px'></a>
+    <a href='alternatives.html'><img style="float: right; padding-top: 8px; padding-right: 8px" src='../../icons/alternatives.png' width='55px'></a>
+        <a href='product_info.html'><img style="float: right; padding-top: 8px; padding-right: 8px" src='../../icons/barcode.png' width='55px'></a>
 </nav>
 
 <div id='mainMenu'>
@@ -84,27 +91,27 @@
 		<a href='preferences.html'><button class="button" style= "padding: 10px 30px;">Back</button> </a>
 	</div>
 
-	<p> <b> Please take the short quiz below to inform us of how to best alert and recommend products to you. </b> </p> 
+	  <p style="font-size: 12px; text-align: left; font-weight: bold"> Please take the short quiz below to inform us of how to best alert and recommend products to you. </p> 
 
-	<p> What is your stance on abortion? <p>
+	  <p style="font-size: 12px; text-align: left; font-weight: bolder"> What is your stance on abortion? </p>
 	<input type="range" id="sliderBar"  min="0" max="100" step="1" value="50" list="settings" />
 
-	<p> Do you support the legalization of same sex marriage? <p>
+		  <p style="font-size: 12px; text-align: left; font-weight: bolder"> Do you support the legalization of same sex marriage? </p>
 	<input type="range" id="sliderBar" min="0" max="100" step="1" value="50">
 
-	<p> Is Global Warming a threat to the environment?<p>
+		  <p style="font-size: 12px; text-align: left; font-weight: bolder"> Is Global Warming a threat to the environment?</p>
 	<input type="range" id="sliderBar" min="0" max="100" step="1" value="50">
 
-	<p> Should the government raise the federal minimum wage? <p>
+		  <p style="font-size: 12px; text-align: left; font-weight: bolder">  Should the government raise the federal minimum wage? </p>
 	<input type="range" id="sliderBar" min="0" max="100" step="1" value="50">
 
-	<p> Do you support increased gun control? <p>
+		  <p style="font-size: 12px; text-align: left; font-weight: bolder">  Do you support increased gun control? </p>
 	<input type="range" id="sliderBar" min="0" max="100" step="1" value="50">
 
-	<p> Do you support the Affordable Care Act (Obamacare)? <p>
+		  <p style="font-size: 12px; text-align: left; font-weight: bolder"> Do you support the Affordable Care Act (Obamacare)? </p>
 	<input type="range" id="sliderBar" min="0" max="100" step="1" value="50">
 
-	<p> Should the government decrease military spending? <p>
+		  <p style="font-size: 12px; text-align: left; font-weight: bolder"> Should the government decrease military spending? </p>
 	<input type="range" id="sliderBar" min="0" max="100" step="1" value="50">
 
 	<div class="wrapper">

@@ -95,8 +95,11 @@ function logo(product) {
 	$('#logo').html($logo);
 }
 
-function piechart_with_legend(product) {
+function piechart_with_legend(product, title) {
 	var party_contributions = product.party_contributions;
+
+	/**** Add title ****/
+	$('.mainMenu').append($('<h1>', { 'text': title }));
 
 	/**** Add legend ****/
 	
@@ -105,7 +108,7 @@ function piechart_with_legend(product) {
 		'width': '50%'
 	});
 
-	$('.papertrail').append($legend);
+	$('.mainMenu').append($legend);
 
 	for (var i = 0; i < party_contributions.length; i++) {
 		var contribution = party_contributions[i];
@@ -134,7 +137,7 @@ function piechart_with_legend(product) {
 		'width': '50%'
 	}).css('float', 'right');
 
-	$('.papertrail').append($graph_div);
+	$('.mainMenu').append($graph_div);
 
 	pie_chart('#graph', party_contributions, {
 		w: 110, h: 110, r: 55
@@ -145,11 +148,11 @@ function piechart_with_legend(product) {
 var main_product = products[0];
 
 logo(main_product);
-piechart_with_legend(main_product);
+piechart_with_legend(main_product, 'Party Breakdown');
 
 var pac_data = $('pac_data', {
 	src: 'http://i.imgur.com/JHmW1G7.png',
 	width: '100%'
 });
 
-$('.papertrail').append(pac_data);
+$('.mainMenu').append(pac_data);

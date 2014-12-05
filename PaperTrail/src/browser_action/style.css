@@ -1,3 +1,8 @@
+* {
+	font-family: 'Helvetica', sans-serif !important;
+	font-size: 13px;
+}
+
 #mainMenu {
 	padding: 10px;
 	padding-top: 80px;
@@ -5,7 +10,6 @@
 	max-height: 300px;
 	width: 248px;
 
-	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	font-size: 11pt;
 }
@@ -52,10 +56,11 @@ h1 {
 	border: 1px solid #bbb;
 	width: 20px;
 	height: 20px;
+	margin-right: 10px;
 }
 
 .legend_block p {
-	padding: 5px;
+	padding: 4px;
 }
 
 
@@ -63,4 +68,5 @@ h1 {
 
 .graph {
 	width: 100%;
+	margin-bottom: 15px;
 }

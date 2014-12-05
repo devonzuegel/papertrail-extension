@@ -156,3 +156,6 @@ var pac_data = $('pac_data', {
 });
 
 $('.mainMenu').append(pac_data);
+
+
+$('#pac_contributions > tbody:last').append('<tr><td>asfsdf</td><td>asfsdf</td></tr><tr><td>asfsdf</td><td>asfsdf</td></tr>');

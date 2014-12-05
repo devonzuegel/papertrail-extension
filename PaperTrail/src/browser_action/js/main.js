@@ -1,4 +1,4 @@
-var party_colors = ['#93b6e9', '#f94D3E' , 'yellow'];
+var party_colors = d3.scale.ordinal().range(['#93b6e9', '#f94D3E' , 'yellow']));
 
 var products = [
 	{
@@ -94,7 +94,7 @@ function logo(product) {
 		width: '100%'
 	});
 
-	$('#logo').html($logo);
+	$('#logo-papertrail').html($logo);
 }
 
 function piechart_with_legend(product) {
@@ -140,7 +140,7 @@ function piechart_with_legend(product) {
 
 	pie_chart('#graph', party_contributions, {
 		w: 110, h: 110, r: 55
-	}, d3.scale.ordinal().range(party_colors));
+	}, party_colors;
 }
 
 

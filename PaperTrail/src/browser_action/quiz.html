@@ -1,69 +1,5 @@
 <!doctype html>
 
-<style type="text/css">
-	#mainMenu {
-		padding: 10px;
-		padding-top: 80px;
-		padding-left: 4px;
-		max-height: 300px;
-		width: 248px;
-
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 300;
-		font-size: 11pt;
-	}
-
-	#mainMenu span {
-		font-size: 9pt;
-	}
-
-	#mainMenu p {
-		color: black !important;
-		text-align: left; 
-		font-size: 12px;
-		font-weight: bolder;
-	}
-
-	h1 {
-		font-size: 2em;
-	}
-
-	.label {
-		font-size: 12pt;
-		text-transform: uppercase;
-	}
-
-	.logo {
-		width: 100%;
-	}
-
-	.graph {
-		width: 100%;
-	}
-
-	.button { 
-		border-bottom-color: #FFFFFF; 
-		background-color: #FFFFFF;
-		margin-bottom: 5px;
-		border-radius: 50px;
-
-	}
-
-	.button:hover { 
-		background-color: #10C9C0;
-	}
-	.wrapper { 
-		text-align: center; 
-	}
-
-input {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-</style>
-
 <head>
 	<script src='js/jquery-2.1.1.min.js' type='text/javascript'></script>
 	<script src='js/handlebars-v2.0.0.js' type='text/javascript'></script>
@@ -73,8 +9,9 @@ input {
   <script src="js/Chart.js" type="text/javascript"></script>
   <script src="https://www.google.com/jsapi?autoload=%7B%22modules%22%3A%5B%7B%22name%22%3A%22visualization%22%2C%22version%22%3A%221%22%2C%22packages%22%3A%5B%22corechart%22%5D%7D%5D%7D" type="text/javascript"></script>
 
-  <style src='../inject/inject.css' type="text/css"></style>
+  <link rel='stylesheet' type='text/css' href='style.css'>
 
+  <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
 </head>
@@ -94,7 +31,7 @@ input {
 		<a href='preferences.html'><button class="button" style= "padding: 10px 30px;">Back</button> </a>
 	</div>
 
-	<p style="font-size: 12px; text-align: left; font-weight: bold"> Please take the short quiz below to inform us of how to best alert and recommend products to you.  <p> 
+	<p><b>Please take the short quiz below to inform us of how to best alert and recommend products to you.</b><p> 
 
 	<p> How do you stand on the issue of abortion? <p>
 	<select name="me" id="me" data-theme="a" data-icon="grid" data-inline="true" data-    native-    menu="true" onchange="if (this.value) window.location.href=this.value">

@@ -23,7 +23,7 @@ var products = [
 		],
 		pac_contributions: [
 			{
-				name: 'Oregen Against Job-Killing Taxes',
+				name: 'Oregon Against Job-Killing Taxes',
 				amount: 150000
 			}, {
 				name: 'Republican Senate Cmte',

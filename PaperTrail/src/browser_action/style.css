@@ -1,4 +1,4 @@
-* {
+.papertrail {
 	font-family: 'Helvetica', sans-serif !important;
 	font-size: 13px;
 }
@@ -28,6 +28,10 @@ body {
 
 h1, h2, h3, h4 {
 	font-family: 'Francois One', sans-serif;
+}
+
+h1 {
+	font-size: 20px;
 }
 
 .label {

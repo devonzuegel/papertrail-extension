@@ -20,6 +20,36 @@ var products = [
 				party: 'Other',
 				value: 6020
 			}
+		],
+		pac_contributions: [
+			{
+				name: 'Oregen Against Job-Killing Taxes',
+				amount: 150000
+			}, {
+				name: 'Republican Senate Cmte',
+				amount: 138440
+			}, {
+				name: 'Yes on 49',
+				amount: 109100
+			}, {
+				name: 'Yes on the Health Kids Plan',
+				amount: 100200
+			}
+		],
+		top_lobbying_issues: [
+			{
+				name: 'Copyright, Patent, & Trademark',
+				amount: 150000
+			}, {
+				name: 'Labor, Antritrust, & Workplace',
+				amount: 138440
+			}, {
+				name: 'Computers & Information Tech',
+				amount: 109100
+			}, {
+				name: 'Consumer Product Safety',
+				amount: 100200
+			}
 		]
 	}, {
 		manufacturer: 'Yonanas',
@@ -92,7 +122,7 @@ function logo(product) {
 		width: '100%'
 	});
 
-	$('#logo').html($logo);
+	$('#logo-papertrail').html($logo);
 }
 
 function piechart_with_legend(product, title) {
@@ -144,18 +174,20 @@ function piechart_with_legend(product, title) {
 	}, d3.scale.ordinal().range(party_colors));
 }
 
+function list(main_product, title, key, div_id) {
+	$(div_id).before('<h1>'+title+'</h1>');
+	var contributions = main_product[key];
+	for (var i = 0; i < contributions.length; i++) {
+		var contribution = contributions[i];
+		$(div_id+' > tbody:last').append('<tr><td>' + (i+1) + '</td><td>' + contribution.name + '</td><td>$' + contribution.amount + '</td></tr>');
+	};
+}
 
 var main_product = products[0];
+
+list(main_product, 'Top PAC Contributions', 'pac_contributions', '#pac_contributions');
 
 logo(main_product);
 piechart_with_legend(main_product, 'Party Breakdown');
 
-var pac_data = $('pac_data', {
-	src: 'http://i.imgur.com/JHmW1G7.png',
-	width: '100%'
-});
-
-$('.mainMenu').append(pac_data);
-
-
-$('#pac_contributions > tbody:last').append('<tr><td>asfsdf</td><td>asfsdf</td></tr><tr><td>asfsdf</td><td>asfsdf</td></tr>');
+list(main_product, 'Top Lobbying Issues', 'top_lobbying_issues', '#top_lobbying_issues');

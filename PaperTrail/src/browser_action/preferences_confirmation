@@ -1,6 +1,70 @@
 <!doctype html>
 
 
+<<<<<<< HEAD
+=======
+<style type="text/css">
+	#mainMenu {
+		padding: 10px;
+		padding-top: 70px;
+		padding-left: 4px;
+		padding-right: 4px; 
+		max-height: 300px;
+		width: 248px;
+		text-align: center; 
+
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 300;
+		font-size: 11pt;
+	}
+
+	#mainMenu span {
+		font-size: 10pt;
+	}
+
+	#mainMenu p {
+		color: black !important;
+		font-size: 9pt; 
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+
+	h2 {
+		font-weight: 300;
+		font-style: bold; 
+		padding-top: 0px
+	}
+
+	.label {
+		font-size: 9pt;
+		text-transform: uppercase;
+	}
+
+	.logo {
+		width: 100%;
+	}
+
+	.graph {
+		width: 100%;
+	}
+
+	.button { 
+		margin-top: 5px; 
+		border-bottom-color: #FFFFFF; 
+		background-color: #FFFFFF;
+		border-radius: 20px;
+
+	}
+
+	.button:hover { 
+		background-color: #00CCCC;
+	}
+
+</style>
+
+>>>>>>> 11c7b78c0507e0748fae3657ccb87d85f68eae2e
 <head>
 	<script src='js/jquery-2.1.1.min.js' type='text/javascript'></script>
 	<script src='js/handlebars-v2.0.0.js' type='text/javascript'></script>

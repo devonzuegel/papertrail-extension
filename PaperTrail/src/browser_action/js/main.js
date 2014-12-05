@@ -84,8 +84,6 @@ function pie_chart(div, data, dimensions, colors) {
 };
 
 
-
-
 function logo(product) {
 	var $header = $('<div>');
 	var $manufacturer = $('h3', { text: 'Manufacturer: ' + product.manufacturer})
@@ -148,3 +146,10 @@ var main_product = products[0];
 
 logo(main_product);
 piechart_with_legend(main_product);
+
+var pac_data = $('pac_data', {
+	src: 'http://i.imgur.com/JHmW1G7.png',
+	width: '100%'
+});
+
+$('.papertrail').append(pac_data);

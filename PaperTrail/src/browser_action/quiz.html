@@ -19,7 +19,9 @@
 
 	#mainMenu p {
 		color: black !important;
-		text-align: center; 
+		text-align: left; 
+		font-size: 12px;
+		font-weight: bolder;
 	}
 
 	h1 {
@@ -43,11 +45,12 @@
 		border-bottom-color: #FFFFFF; 
 		background-color: #FFFFFF;
 		margin-bottom: 5px;
+		border-radius: 50px;
 
 	}
 
 	.button:hover { 
-		background-color: #6aaf6a;
+		background-color: #10C9C0;
 	}
 	.wrapper { 
 		text-align: center; 
@@ -91,28 +94,137 @@ input {
 		<a href='preferences.html'><button class="button" style= "padding: 10px 30px;">Back</button> </a>
 	</div>
 
-	  <p style="font-size: 12px; text-align: left; font-weight: bold"> Please take the short quiz below to inform us of how to best alert and recommend products to you. </p> 
+	<p style="font-size: 12px; text-align: left; font-weight: bold"> Please take the short quiz below to inform us of how to best alert and recommend products to you.  <p> 
 
-	  <p style="font-size: 12px; text-align: left; font-weight: bolder"> What is your stance on abortion? </p>
-	<input type="range" id="sliderBar"  min="0" max="100" step="1" value="50" list="settings" />
+	<p> How do you stand on the issue of abortion? <p>
+	<select name="me" id="me" data-theme="a" data-icon="grid" data-inline="true" data-    native-    menu="true" onchange="if (this.value) window.location.href=this.value">
+    	<option value="" selected="true">Choose Stance</option>
+    	<option value="#option1">1 - Republican</option>
+    	<option value="#option2">2</option>
+    	<option value="#option3">3 - Moderate</option>
+    	<option value="#option4">4</option>
+    	<option value="#option5">5 - Democrat</option>
+	</select>
 
-		  <p style="font-size: 12px; text-align: left; font-weight: bolder"> Do you support the legalization of same sex marriage? </p>
-	<input type="range" id="sliderBar" min="0" max="100" step="1" value="50">
+	<p> How do you stand on the issue of same sex marriage? <p>
+	<select name="me" id="me" data-theme="a" data-icon="grid" data-inline="true" data-    native-    menu="true" onchange="if (this.value) window.location.href=this.value">
+    	<option value="" selected="true">Choose Stance</option>
+    	<option value="#option1">1 - Republican</option>
+    	<option value="#option2">2</option>
+    	<option value="#option3">3 - Moderate</option>
+    	<option value="#option4">4</option>
+    	<option value="#option5">5 - Democrat</option>
+	</select>
 
-		  <p style="font-size: 12px; text-align: left; font-weight: bolder"> Is Global Warming a threat to the environment?</p>
-	<input type="range" id="sliderBar" min="0" max="100" step="1" value="50">
+	<p> How do you stand on the issue of Global Warming and whether or not it's a threat to the environment?<p>
+	<select name="me" id="me" data-theme="a" data-icon="grid" data-inline="true" data-    native-    menu="true" onchange="if (this.value) window.location.href=this.value">
+    	<option value="" selected="true">Choose Stance</option>
+    	<option value="#option1">1 - Republican</option>
+    	<option value="#option2">2</option>
+    	<option value="#option3">3 - Moderate</option>
+    	<option value="#option4">4</option>
+    	<option value="#option5">5 - Democrat</option>
+	</select>
 
-		  <p style="font-size: 12px; text-align: left; font-weight: bolder">  Should the government raise the federal minimum wage? </p>
-	<input type="range" id="sliderBar" min="0" max="100" step="1" value="50">
+	<p>  How do you stand on the issue of whether or not the government should raise the federal minimum wage? <p>
+	<select name="me" id="me" data-theme="a" data-icon="grid" data-inline="true" data-    native-    menu="true" onchange="if (this.value) window.location.href=this.value">
+    	<option value="" selected="true">Choose Stance</option>
+    	<option value="#option1">1 - Republican</option>
+    	<option value="#option2">2</option>
+    	<option value="#option3">3 - Moderate</option>
+    	<option value="#option4">4</option>
+    	<option value="#option5">5 - Democrat</option>
+	</select>
 
-		  <p style="font-size: 12px; text-align: left; font-weight: bolder">  Do you support increased gun control? </p>
-	<input type="range" id="sliderBar" min="0" max="100" step="1" value="50">
+	<p> How do you stand on the issue of increased gun control? <p>
+	<select name="me" id="me" data-theme="a" data-icon="grid" data-inline="true" data-    native-    menu="true" onchange="if (this.value) window.location.href=this.value">
+    	<option value="" selected="true">Choose Stance</option>
+    	<option value="#option1">1 - Republican</option>
+    	<option value="#option2">2</option>
+    	<option value="#option3">3 - Moderate</option>
+    	<option value="#option4">4</option>
+    	<option value="#option5">5 - Democrat</option>
+	</select>
 
-		  <p style="font-size: 12px; text-align: left; font-weight: bolder"> Do you support the Affordable Care Act (Obamacare)? </p>
-	<input type="range" id="sliderBar" min="0" max="100" step="1" value="50">
+	<p> How do you stand on the issue of the Affordable Care Act (Obamacare)? <p>
+	<select name="me" id="me" data-theme="a" data-icon="grid" data-inline="true" data-    native-    menu="true" onchange="if (this.value) window.location.href=this.value">
+    	<option value="" selected="true">Choose Stance</option>
+    	<option value="#option1">1 - Republican</option>
+    	<option value="#option2">2</option>
+    	<option value="#option3">3 - Moderate</option>
+    	<option value="#option4">4</option>
+    	<option value="#option5">5 - Democrat</option>
+	</select>
 
-		  <p style="font-size: 12px; text-align: left; font-weight: bolder"> Should the government decrease military spending? </p>
-	<input type="range" id="sliderBar" min="0" max="100" step="1" value="50">
+	<p> How do you stand on the issue of whether or not the government should decrease military spending? <p>
+	<select name="me" id="me" data-theme="a" data-icon="grid" data-inline="true" data-    native-    menu="true" onchange="if (this.value) window.location.href=this.value">
+    	<option value="" selected="true">Choose Stance</option>
+    	<option value="#option1">1 - Republican</option>
+    	<option value="#option2">2</option>
+    	<option value="#option3">3 - Moderate</option>
+    	<option value="#option4">4</option>
+    	<option value="#option5">5 - Democrat</option>
+	</select>
+
+	<p> How do you stand on the issue of whether or not the government should make cuts to public spending in order to reduce the national debt? <p>
+	<select name="me" id="me" data-theme="a" data-icon="grid" data-inline="true" data-    native-    menu="true" onchange="if (this.value) window.location.href=this.value">
+    	<option value="" selected="true">Choose Stance</option>
+    	<option value="#option1">1 - Republican</option>
+    	<option value="#option2">2</option>
+    	<option value="#option3">3 - Moderate</option>
+    	<option value="#option4">4</option>
+    	<option value="#option5">5 - Democrat</option>
+	</select>
+
+	<p> How do you stand on the issue of decriminalizing drug use? <p>
+	<select name="me" id="me" data-theme="a" data-icon="grid" data-inline="true" data-    native-    menu="true" onchange="if (this.value) window.location.href=this.value">
+    	<option value="" selected="true">Choose Stance</option>
+    	<option value="#option1">1 - Republican</option>
+    	<option value="#option2">2</option>
+    	<option value="#option3">3 - Moderate</option>
+    	<option value="#option4">4</option>
+    	<option value="#option5">5 - Democrat</option>
+	</select>
+
+	<p> How do you stand on the issue of affirmative action programs? <p>
+	<select name="me" id="me" data-theme="a" data-icon="grid" data-inline="true" data-    native-    menu="true" onchange="if (this.value) window.location.href=this.value">
+    	<option value="" selected="true">Choose Stance</option>
+    	<option value="#option1">1 - Republican</option>
+    	<option value="#option2">2</option>
+    	<option value="#option3">3 - Moderate</option>
+    	<option value="#option4">4</option>
+    	<option value="#option5">5 - Democrat</option>
+	</select>
+
+	<p> How do you stand on the issue of increasing taxes on the rich in order to reduce interest rates for student loans? <p>
+	<select name="me" id="me" data-theme="a" data-icon="grid" data-inline="true" data-    native-    menu="true" onchange="if (this.value) window.location.href=this.value">
+    	<option value="" selected="true">Choose Stance</option>
+    	<option value="#option1">1 - Republican</option>
+    	<option value="#option2">2</option>
+    	<option value="#option3">3 - Moderate</option>
+    	<option value="#option4">4</option>
+    	<option value="#option5">5 - Democrat</option>
+	</select>
+
+	<p> How do you stand on the issue of adopting Common Core national educational standards? <p>
+	<select name="me" id="me" data-theme="a" data-icon="grid" data-inline="true" data-    native-    menu="true" onchange="if (this.value) window.location.href=this.value">
+    	<option value="" selected="true">Choose Stance</option>
+    	<option value="#option1">1 - Republican</option>
+    	<option value="#option2">2</option>
+    	<option value="#option3">3 - Moderate</option>
+    	<option value="#option4">4</option>
+    	<option value="#option5">5 - Democrat</option>
+	</select>
+
+	<p> How do you stand on the issue of stronger measures to increase our border security? <p>
+	<select name="me" id="me" data-theme="a" data-icon="grid" data-inline="true" data-    native-    menu="true" onchange="if (this.value) window.location.href=this.value">
+    	<option value="" selected="true">Choose Stance</option>
+    	<option value="#option1">1 - Republican</option>
+    	<option value="#option2">2</option>
+    	<option value="#option3">3 - Moderate</option>
+    	<option value="#option4">4</option>
+    	<option value="#option5">5 - Democrat</option>
+	</select>
 
 	<div class="wrapper">
 		<a href='preferences_confirmation.html'><button class="button" style= "padding: 10px 30px;">Submit</button> </a>

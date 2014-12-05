@@ -4,8 +4,11 @@ The impact of corporate political contributions is largely opaque to the general
 
 ### Contributors
 [Devon Zuegel](mailto:devonz@cs.stanford.edu)
+
 [Nick Huber](mailto:nhuber@stanford.edu)
+
 [Milan Doshi](mailto:miland@stanford.edu)
+
 [Maxine Fonua](mailto:mfonua@gmail.com)
 
 # Installation

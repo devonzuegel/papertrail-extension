@@ -11,4 +11,4 @@ The impact of corporate political contributions is largely opaque to the general
 
 2. Go to [chrome://extensions/](chrome://extensions/) and enable Developer Mode by checking the box at the top right of the page.
 
-3. Click "Load unpacked extension" and navigate to the `PaperTrail` folder that you downloaded.
+3. From the settings tab in the top right of Chrome, click "Load unpacked extension" and navigate to the `PaperTrail` folder that you downloaded.

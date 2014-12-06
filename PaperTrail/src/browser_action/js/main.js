@@ -191,3 +191,12 @@ logo(main_product);
 piechart_with_legend(main_product, 'Party Breakdown');
 
 list(main_product, 'Top Lobbying Issues', 'top_lobbying_issues', '#top_lobbying_issues');
+
+
+var source = document.getElementById('test-template').innerHTML;
+var template = Handlebars.compile(source);
+var context = { testvar: 'xxx' };
+var output = template(context);
+document.getElementById('testoutput').innerHTML = output;
+
+alert('salkdfj');

@@ -78,3 +78,77 @@ h1 {
 	width: 100%;
 	margin-bottom: 15px;
 }
+
+/* MISC */
+
+
+	#mainMenu p {
+		color: black !important;
+		font-size: 9pt; 
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+
+	h2 {
+		font-weight: 300;
+		font-style: bold; 
+		padding-top: 0px
+	}
+
+	.label {
+		font-size: 9pt;
+		text-transform: uppercase;
+	}
+
+	.logo {
+		width: 100%;
+	}
+
+	.graph {
+		width: 100%;
+	}
+
+	.button { 
+		margin-top: 5px; 
+		border-bottom-color: #FFFFFF; 
+		background-color: #FFFFFF;
+		border-radius: 20px;
+
+	}
+
+	.button:hover { 
+		background-color: #00CCCC;
+	}
+
+  .label {
+    font-size: 9pt;
+    text-transform: uppercase;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .graph {
+    width: 100%;
+  }
+
+  .button { 
+    margin-top: 5px; 
+    border-bottom-color: #FFFFFF; 
+    background-color: #FFFFFF;
+
+  }
+
+  .button:hover { 
+    background-color: #00CCCC;
+  }
+
+.alts img {
+    border: solid 1px transparent;
+}
+.alts img:hover {
+    border-color: green;
+}

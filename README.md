@@ -14,3 +14,5 @@ The impact of corporate political contributions is largely opaque to the general
 3. Click "Load unpacked extension" and navigate to the `PaperTrail` folder that you downloaded.
 
 4. From the settings tab in the top right of Chrome, click "Load unpacked extension" and navigate to the `PaperTrail` folder that you downloaded.
+
+> PLEASE NOTE: This extension is still under development.
